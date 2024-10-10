@@ -21,7 +21,7 @@ pose = mp_pose.Pose()
 action_label = ""
 
 # Ruta del video
-video_path = './VideosDATA/*****.mp4'
+video_path = '../Videos/Caminando_Devuelta.mp4'
 cap = cv2.VideoCapture(video_path)
 
 
