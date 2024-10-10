@@ -24,9 +24,7 @@ action_label = ""
 video_path = '../Videos/Caminando_Devuelta.mp4'
 cap = cv2.VideoCapture(video_path)
 
-
-
-with open('./DataBase/database_pose_******.csv', mode='w', newline='') as file:
+with open('../VideosDataSet/database_pose_Caminando_Devuelta.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     
     header = ['label']
