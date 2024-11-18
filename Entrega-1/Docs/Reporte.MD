@@ -3,6 +3,7 @@
 Integrantes :
  - Manuel Herrera A00381987
  - Kevin Loachamin A00382106
+ -Juan Esteban Brawn A00381715
 
 
 ## 1. Pregunta de investigación

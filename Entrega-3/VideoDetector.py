@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 
 # Cargar el modelo entrenado
-model = joblib.load('Entrega-3/action_classifier_99_features.pkl')
+model = joblib.load('Entrega-3/action_classifier_99_features_nuevo.pkl')
 
 # Inicializar MediaPipe y OpenCV
 mp_pose = mp.solutions.pose
