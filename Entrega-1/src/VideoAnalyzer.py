@@ -26,6 +26,10 @@ def get_action_label(filename):
         return "Quieto"
     elif "CaminandoL" in filename:
         return "Caminando_Lado"
+    elif "Parandose" in filename:
+        return "Parandose"
+    elif "Sentandose" in filename:
+        return "Sentandose"
     else:
         return "Desconocido"  # Por si algún archivo no coincide con ninguna etiqueta
 
