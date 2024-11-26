@@ -48,6 +48,22 @@ This problem is particularly interesting as it combines challenges in computer v
   - Multiple camera angles (front, side, 45 degrees).
 
 ### 2. Processing Pipeline
+
+## Data Cleaning and Normalization
+
+### Data Cleaning
+The initial step in preparing the data involved handling missing values and outliers. The dataset was first checked for any missing values, which were found to be absent, allowing us to proceed directly to outlier detection. Outliers were identified using the Interquartile Range (IQR) method, which calculates the range between the first (Q1) and third quartiles (Q3) and defines outliers as any data points outside the range [Q1 - 1.5 * IQR, Q3 + 1.5 * IQR]. These outliers were then filtered out to ensure the dataset's integrity and reliability.
+
+### Data Normalization
+Normalization was performed to standardize the joint coordinates, ensuring that each feature had a mean of 0 and a standard deviation of 1. This step is crucial to eliminate any bias due to differences in subject height or camera distance, which could affect the model's performance. The normalization process involved adjusting each feature by subtracting the mean and dividing by the standard deviation, thus scaling the data to a common range.
+
+### Data Smoothing
+To further enhance data quality, a Savitzky-Golay filter was applied to smooth the joint positions. This technique helps reduce noise while preserving important features such as peaks and valleys in the data, resulting in cleaner trajectories and higher feature quality.
+
+### Feature Generation
+After cleaning and normalizing the data, features were generated to capture essential aspects of human movement. These features included joint velocities, calculated from frame-to-frame positions, relative joint angles to understand body posture, and trunk inclination measured from shoulder and hip positions to capture posture and balance. These features were crucial for the model to accurately classify human activities.
+
+
 ```python
 # Normalize the data
 data_normalized = normalize_data(df.copy())
